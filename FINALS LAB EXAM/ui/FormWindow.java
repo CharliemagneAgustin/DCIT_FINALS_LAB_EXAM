@@ -52,8 +52,6 @@ public class FormWindow extends JFrame {
 
         addButton.addActionListener(e
                 -> {
-            try {
-                
                 String name = nameField.getText();
                 String desc = descField.getText();
 
@@ -82,9 +80,7 @@ public class FormWindow extends JFrame {
 
                 mainWindow.loadTask();
                 dispose();
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Invalid Task ID", "Error", JOptionPane.ERROR_MESSAGE);
-            }
+            
         });
 
     }
